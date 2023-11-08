@@ -1,7 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Viewer</title>
+</head>
 <body>
-<h1>Hello</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <h1>Filter Database</h1>
+    <label for="age">Age:</label>
+    <select id="age">
+        <option value="">All</option>
+        <option value="3-5">3-5</option>
+        <option value="6-9">6-9</option>
+        <!-- Add more age options as needed -->
+    </select>
+
+    <label for="year">Year:</label>
+    <select id="year">
+        <option value="">All</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <!-- Add more year options as needed -->
+    </select>
+
+    <label for="region">Region:</label>
+    <select id="region">
+        <option value="">All</option>
+        <option value="Eastern Europe">Eastern Europe</option>
+        <option value="Eastern Asia">Eastern Asia</option>
+        <!-- Add more region options as needed -->
+    </select>
+
+    <div id="result"></div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        d3.csv("your_database.csv").then(function(data) {
+            // Process and filter data based on user selections
+            // Update the "result" div with the filtered data
+        });
+    </script>
 </body>
 </html>
